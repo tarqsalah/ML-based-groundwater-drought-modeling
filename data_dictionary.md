@@ -70,5 +70,4 @@ data available on request.
 ## Provenance
 
 - Raw sources and access dates: see `../data/README.md`.
-- Processing steps: see `../R/01_feature_engineering.R`.
 - Coordinate reference system: Irish Transverse Mercator (ITM).
