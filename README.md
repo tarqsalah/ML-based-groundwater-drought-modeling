@@ -1,4 +1,4 @@
-# Defining and Predicting Groundwater Drought Dynamics in a Temperate Maritime Region using Standardised Groundwater Index (SGI) and Ensemble Machine Learning 
+# Groundwater Drought Prediction using Ensemble Machine Learning
 
 Code for an integrated framework that defines, detects, and predicts
 groundwater drought across the Irish groundwater monitoring network, combining
