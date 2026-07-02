@@ -20,7 +20,7 @@ sources listed below.
 | Groundwater level records | EPA Ireland — HydroNet | https://epawebapp.epa.ie/hydronet/
 | Precipitation & temperature | Met Éireann | https://www.met.ie/climate/available-data/daily-data) |
 | Aquifer category, subsoil permeability, groundwater vulnerability, HAND | Geological Survey Ireland (GSI) | https://www.gsi.ie/en-ie/data-and-maps/Pages/default.aspx
-| Soil hydrology | EPA Ireland — geoportal | [EPA geoportal URL] |
+| Soil hydrology | EPA Ireland — geoportal | https://gis.epa.ie/geonetwork/srv/eng/catalog.search#/metadata/c67bfab5-733f-4e6a-b60e-3cf037b5729a)|
 | Topography (elevation, slope) | Copernicus GLO-30 DEM, via OpenTopography (ESA, 2024) | https://portal.opentopography.org/ |
 
 Notes:
