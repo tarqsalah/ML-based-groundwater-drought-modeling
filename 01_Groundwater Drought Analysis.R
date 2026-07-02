@@ -187,3 +187,4 @@ ggplot(drought.data, aes(y = station.name, x = start.date)) +
           legend.key.size = unit(0.3, "cm"),   # Reduce legend key size
           legend.text = element_text(size = 7), # Reduce legend text size
           legend.title = element_text(size = 8)) # Reduce legend title size
+#_______________________________________________________________________________
