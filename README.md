@@ -1,4 +1,4 @@
-# Groundwater Drought Prediction using Ensemble Machine Learning
+# Defining and Predicting Groundwater Drought Dynamics in a Temperate Maritime Region using Standardised Groundwater Index (SGI) and Ensemble Machine Learning 
 
 Code for an integrated framework that defines, detects, and predicts
 groundwater drought across the Irish groundwater monitoring network, combining
@@ -15,7 +15,7 @@ quick-response from delayed-response groundwater systems.
 
 If you use this code, please cite:
 
-> [Author(s)] ([Year]). [Manuscript title]. *[Journal]*, [vol(issue), pages].
+> [Tarig, 2026] Defining and Predicting Groundwater Drought Dynamics in a Temperate Maritime Region using Standardised Groundwater Index (SGI) and Ensemble Machine Learning . *[Journal]*, [vol(issue), pages].
 > https://doi.org/[article DOI]
 
 Archived code release: https://doi.org/[Zenodo or Figshare DOI]
@@ -30,11 +30,8 @@ Archived code release: https://doi.org/[Zenodo or Figshare DOI]
 ├── LICENSE
 ├── .gitignore
 ├── R/
-│   ├── 00_download_data.R        # retrieve groundwater levels (KiWIS API) + raw inputs
-│   ├── 01_feature_engineering.R  # SGI, lagged/antecedent features, 500 m hydrogeological extraction
-│   ├── 02_sgi_monthly.R          # SGI monthly drought analysis
-│   ├── 03_modelling_pipeline.R   # two-phase subset-based modelling (helper functions included)
-│   └── helper_functions.R        # (only if you keep functions separate; otherwise inlined in 03)
+│   ├── 00_Groundwater Drought Analysis.R    # SGI monthly drought analysis
+│   ├── 01_Groundwater Drought Modelling.R   # two-phase subset-based modelling
 ├── data/
 │   └── README.md                 # raw-source links + how to regenerate / request processed data
 ├── docs/
@@ -56,8 +53,9 @@ In line with the manuscript's Data Availability statement:
 - **Analysis code and figure-generation scripts** — in this repository.
 - **Raw input data** — publicly available from the original providers (EPA
   Ireland, Geological Survey Ireland, Copernicus GLO-30 DEM via OpenTopography,
-  and [meteorological provider — confirm]). See [`data/README.md`](data/README.md)
+  and Met  Éireann’s. See [`data/README.md`](data/README.md)
   for links and access details.
+  
 - **Processed/derived datasets** — available from the corresponding author on
   reasonable request, or regenerable from the raw sources using the scripts here.
 
@@ -69,7 +67,7 @@ from the public sources is in `R/`.
 
 ## Requirements
 
-- **R** version [X.X.X] (`R.version.string`)
+- **R** version [4.3.2] (`R.version.string`)
 - Install packages:
 
 ```r
@@ -112,12 +110,4 @@ Drought is defined as SGI ≤ −1.5 (see `docs/data_dictionary.md`).
 
 ## License
 
-Released under the [MIT] License — see [LICENSE](LICENSE). Confirm the licence
-choice; if you later add data, data and code are typically licensed separately
-(e.g. CC-BY-4.0 for data).
-
----
-
-## Contact
-
-[Name] — [affiliation] — [email / ORCID]
+Released under the [MIT] License — see [LICENSE](LICENSE). 
