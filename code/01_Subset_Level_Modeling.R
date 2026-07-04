@@ -1,9 +1,6 @@
 # =============================================================================
 # Groundwater Drought Prediction — Consolidated Modelling Pipeline
 #
-# Data files expected in the working directory (see README):
-#   lowland_catchment_data_v2.csv, upland_catchment_data_v3.csv,
-#   complete_station_data.csv, complete_GWL_data.csv
 # =============================================================================
 # LIBRARIES
 # =============================================================================
