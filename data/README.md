@@ -13,8 +13,6 @@ sources listed below.
 
 ## Raw data sources (publicly available)
 
-> Verify each link and access date before publishing; update any that have moved.
-
 | Dataset | Provider | Access |
 |---|---|---|
 | Groundwater level records | EPA Ireland — HydroNet | https://epawebapp.epa.ie/hydronet/
@@ -24,7 +22,7 @@ sources listed below.
 | Topography (elevation, slope) | Copernicus GLO-30 DEM, via OpenTopography (ESA, 2024) | https://portal.opentopography.org/ |
 
 Notes:
-- Access dates: data were retrieved [month/year] — state the retrieval window,
+- Access dates: data were retrieved [2010 - 2023] — state the retrieval window,
   since some of these services update continuously.
 - The raw layers are not re-hosted here because of their size and their
   providers' licensing terms; please obtain them directly from the sources above.
@@ -36,18 +34,17 @@ Notes:
 Run the scripts in `../R/` in order:
 
 ```
-00_download_data.R        # retrieve groundwater levels (KiWIS API) + assemble raw inputs
-01_feature_engineering.R  # SGI, lagged/antecedent features, 500 m hydrogeological extraction
-02_sgi_monthly.R          # SGI drought analysis
-03_modelling_pipeline.R   # two-phase subset-based modelling
-```
+00_Groundwater Drought Analysis.R   # SGI drought analysis
+01_Site_Level_Modeling.R  #phase-one site-based modelling
+03_Subset_Level_Modeling.R #phase-two subset-based modelling
 
+```
 This reproduces the processed feature sets used for modelling. See
 `../docs/data_dictionary.md` for variable definitions and units.
-
 ---
 
 ## Processed data on request
 
 The processed/derived datasets (the modelling feature tables) are available from
-the corresponding author on reasonable request. Contact: [name, email/ORCID].
+the corresponding author on reasonable request. Contact: [Tarig Mohamed, Tariq.salah.mohamed@gmail.com].
+
