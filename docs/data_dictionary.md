@@ -4,10 +4,6 @@ Variable definitions for the modelling feature set used in this study. This
 serves as the metadata reference for the deposited code and for the processed
 data available on request.
 
-> Fill in the bracketed units/details — these depend on your source data and
-> only you can confirm them. Remove any variables you did not use, and add any
-> that are missing.
-
 ---
 
 ## Identifiers and target
@@ -32,9 +28,6 @@ data available on request.
 | `cum.rain1 … cum.rain6` | Antecedent cumulative precipitation over the preceding 1–6 months | [mm] |
 | `cum.rain.wk1 … cum.rain.wk4` | Antecedent cumulative precipitation over the preceding 1–4 weeks | [mm] |
 | `train / train.wk1 …` | Antecedent mean temperature over the preceding period (1–4 weeks weekly; up to 6 months monthly) | [°C] |
-
-> Note: reconcile these names with the columns actually retained in the final
-> feature selection (the modelling script selects a subset of these).
 
 ---
 
