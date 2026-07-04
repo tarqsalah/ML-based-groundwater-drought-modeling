@@ -43,7 +43,7 @@ data available on request.
 | Variable | Description | Units |
 |---|---|---|
 | `SGI.1`, `SGI.2` | SGI lagged 1 and 2 months | dimensionless |
-| `gw.memory` / response time | Estimated groundwater response time (lag at which groundwater level correlates most strongly with the climate signal) | [months] |
+| `gw.memory` / response time | Estimated groundwater response time (lag at which groundwater level correlates most strongly with the climate signal) | [days] |
 
 ---
 
@@ -62,8 +62,7 @@ data available on request.
 | `gw.vulnerability` | Dominant groundwater vulnerability class | categorical |
 
 > Continuous layers were summarised by their mean within the 500 m buffer;
-> categorical layers by their dominant (majority-area) class. State this once
-> here and in the Methods.
+> categorical layers by their dominant (majority-area) class.
 
 ---
 
