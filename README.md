@@ -6,9 +6,6 @@ the Standardised Groundwater Index (SGI) with ensemble machine learning. The
 framework uses a two-phase, subset-based approach that distinguishes
 quick-response from delayed-response groundwater systems.
 
-> **Before publishing:** fill every `[bracketed]` placeholder, confirm the
-> script filenames match the run order below, and delete this note.
-
 ---
 
 ## Citation
@@ -31,21 +28,14 @@ Archived code release: https://doi.org/[Zenodo or Figshare DOI]
 ├── .gitignore
 ├── R/
 │   ├── 00_Groundwater Drought Analysis.R    # SGI monthly drought analysis
-│   ├── 01_Groundwater Drought Modelling.R   # two-phase subset-based modelling
+│   ├── 01_Site_Level_Modeling.R #phase-one site-based modelling
+│   ├── 02_Subset_Level_Modeling.R #phase-two subset-based modelling
 ├── data/
 │   └── README.md                 # raw-source links + how to regenerate / request processed data
 ├── docs/
 │   └── data_dictionary.md        # variable definitions and units
 └── outputs/                      # generated figures/tables (git-ignored)
 ```
-
-> **Filename note:** scripts should be numbered in run order. The modelling
-> script is currently named `01_modelling_pipeline.R` but runs *last* — rename
-> it to `03_modelling_pipeline.R`, and confirm SGI vs. feature-engineering order
-> matches how you actually run them.
-
----
-
 ## Data availability
 
 In line with the manuscript's Data Availability statement:
@@ -58,18 +48,13 @@ In line with the manuscript's Data Availability statement:
   
 - **Processed/derived datasets** — available from the corresponding author on
   reasonable request, or regenerable from the raw sources using the scripts here.
-
-Raw and processed data are not committed to this repository (third-party
-licensing and file size). Everything needed to reproduce the processed data
-from the public sources is in `R/`.
-
+  
 ---
 
 ## Requirements
 
 - **R** version [4.3.2] (`R.version.string`)
 - Install packages:
-
 ```r
 install.packages(c(
   "tidyverse", "lubridate", "patchwork",
@@ -89,17 +74,16 @@ install.packages(c(
 
 Run the scripts in `R/` in numerical order, from the repository root:
 
-1. `00_download_data.R` — assemble raw inputs (requires access to the sources in `data/README.md`).
-2. `01_feature_engineering.R` — build SGI and the predictor set.
-3. `02_sgi_monthly.R` — SGI drought analysis and figures.
-4. `03_modelling_pipeline.R` — train and evaluate the two-phase subset models.
+1. `00_Groundwater_Drought_Anlaysis.R` — SGI drought analysis and figures.
+2. `01_Site_Level_Modeling.R` — 
+3. `02_Subset_Level_Modeling.R` — train and evaluate the two-phase subset models.
 
 ### Method summary
 
 - **Phase 1 — site-level:** one classifier per monitoring station, trained on
   meteorological inputs + SGI to predict monthly drought / non-drought.
 - **Subset assignment:** sites are stratified into quick- vs delayed-response
-  groups [state the rule].
+  groups based on predictive performance (AUC-ROC > 0.8) of the site's models.
 - **Phase 2 — subset-level:** per-subset models trained on combined
   meteorological + hydrogeological features. RUSBoost gave the best
   minority-class performance.
